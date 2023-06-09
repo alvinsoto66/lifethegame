@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Life, the game.</title>
+		<script type="module" crossorigin src="/assets/index-f12f0a88.js"></script>
+		<link rel="stylesheet" href="/assets/index-49cc40e8.css">
+	</head>
+	<body>
+		<div id="app">
+			<div id="start-screen" class="screen visible">
+				<h1>Life</h1>
+				<button id="play-btn">Play</button>
+			</div>
+			<div id="directions-screen" class="screen">
+				<h1>Directions</h1>
+				<p>
+					This game attempts to teach you responsible decision
+					making.<br />You will be given a few choices.<br />Three
+					strikes and you're out.<br />Try to survive.
+				</p>
+				<button id="continue-btn">Continue</button>
+			</div>
+			<div id="strikes-screen" class="screen">
+				<h1>Wrong answer</h1>
+				<p id="strike-text">3 strikes and you're out.</p>
+				<div id="strikes">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="2em"
+						viewBox="0 0 384 512"
+						class="strike"
+						id="strike-1"
+					>
+						<path
+							d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+						/>
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="2em"
+						viewBox="0 0 384 512"
+						class="strike"
+						id="strike-2"
+					>
+						<path
+							d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+						/>
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="2em"
+						viewBox="0 0 384 512"
+						class="strike"
+						id="strike-3"
+					>
+						<path
+							d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+						/>
+					</svg>
+				</div>
+				<button id="sorry-btn">Okay, sorry.</button>
+			</div>
+			<div id="choice1-screen" class="screen">
+				<h1>
+					<h1>Question 1</h1>
+					<p>What do you want to eat for breakfast?</p>
+					<div id="foods">
+						<img src="/burger.png" id="burger-btn" width="256" />
+						<img src="/cereal.png" id="cereal-btn" width="256" />
+					</div>
+					<!--<button id="test-btn"></button>-->
+				</h1>
+			</div>
+			<div id="choice2-screen" class="screen">
+				<h1>Question 2</h1>
+				<p>Skip school?</p>
+				<img width="400" height="400" src="/school.png" alt="" />
+				<button id="skip-btn">Yes</button>
+				<button id="dont-skip-btn">No</button>
+			</div>
+			<div id="choice3-screen" class="screen">
+				<h1>Question 3</h1>
+				<p>
+					Your phone is getting blown up with notifications.<br />Check
+					it.
+				</p>
+				<button id="open-phone-btn">Open Phone</button>
+			</div>
+			<div id="phone-screen" class="screen">
+				<div id="phone">
+					<div id="phone-notch">
+						<p>T-Mobile</p>
+						<div id="phone-notch-box"></div>
+						<p id="phone-time">7:02 PM</p>
+					</div>
+					<div id="phone-inner">
+						<div id="phone-nav">
+							<p>Edit</p>
+							<p>Compose</p>
+						</div>
+						<h1 id="phone-messages-title">Messages</h1>
+						<div id="phone-messages"></div>
+					</div>
+				</div>
+				<button id="ignore-btn">Block/Ignore</button>
+				<button id="respond-btn">Respond</button>
+			</div>
+			<div id="choice4-screen" class="screen">
+				<h1>Question 4</h1>
+				<p>You get home and are deciding on what you're going to do.</p>
+				<button id="videogames-btn">Play videogames</button>
+				<button id="study-btn">Study</button>
+			</div>
+			<div id="videogames-screen" class="screen">
+				<h1>Question 4</h1>
+				<p>Go on, play the game :(</p>
+				<iframe
+					src="https://snak.ee/google-snake-new/index.html"
+					width="630"
+					height="630"
+				></iframe>
+				<button id="videogames-continue-btn">Continue</button>
+			</div>
+			<div id="choice5-screen" class="screen">
+				<h1>Question 5</h1>
+				<p>
+					Your friend is drunk, and he offered to drive you home from
+					a meeting.
+				</p>
+				<img src="/drunkguy.jpg" width="200" />
+				<button id="friendride-btn">Go with your friend</button>
+				<button id="taxi-btn">Go take a taxi</button>
+			</div>
+			<div id="choice6-screen" class="screen">
+				<h1>You win!</h1>
+				<p>Great job! Hopefully you learned a thing or two :)</p>
+				<img src="/trophy.png" width="128">
+				<button id="restart-btn">Restart</button>
+			</div>
+		</div>
+		
+	</body>
+</html>
